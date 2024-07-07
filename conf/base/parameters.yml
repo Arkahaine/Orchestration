@@ -1,0 +1,6 @@
+raw_data_path: "data\\01_raw"
+data_yaml_path: "data\\01_raw\\data.yaml"
+img_size: 640
+epochs: 10
+batch_size: 64
+test_data_path: "data\\01_raw\\test"

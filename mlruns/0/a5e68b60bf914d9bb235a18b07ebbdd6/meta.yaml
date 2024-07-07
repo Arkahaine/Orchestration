@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/a5e68b60bf914d9bb235a18b07ebbdd6/artifacts
+end_time: 1719327866049
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a5e68b60bf914d9bb235a18b07ebbdd6
+run_name: bright-quail-818
+run_uuid: a5e68b60bf914d9bb235a18b07ebbdd6
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719327854378
+status: 3
+tags: []
+user_id: arkah

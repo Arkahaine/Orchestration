@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orchestration
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: orchestration
+  template:
+    metadata:
+      labels:
+        app: orchestration
+    spec:
+      containers:
+      - name: orchestration
+        image: votre_utilisateur/votre_repos:latest
+        ports:
+        - containerPort: 5000
