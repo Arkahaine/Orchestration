@@ -1,19 +1,32 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: orchestration
+  name: flask-app
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
-      app: orchestration
+      app: flask-app
   template:
     metadata:
       labels:
-        app: orchestration
+        app: flask-app
     spec:
       containers:
-      - name: orchestration
-        image: votre_utilisateur/votre_repos:latest
+      - name: flask-app
+        image: arkahaine/flask-app:latest
         ports:
         - containerPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-app-service
+spec:
+  selector:
+    app: flask-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
+  type: LoadBalancer

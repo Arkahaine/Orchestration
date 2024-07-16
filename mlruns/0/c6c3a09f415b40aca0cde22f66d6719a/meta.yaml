@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/c6c3a09f415b40aca0cde22f66d6719a/artifacts
+end_time: 1720367769033
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c6c3a09f415b40aca0cde22f66d6719a
+run_name: tasteful-shoat-829
+run_uuid: c6c3a09f415b40aca0cde22f66d6719a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1720367768962
+status: 3
+tags: []
+user_id: arkah

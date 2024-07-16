@@ -1,7 +1,7 @@
 from kedro.pipeline import Pipeline, node
-from .nodes import train_yolo, evaluate_model, test_model
+from .nodes import train_yolo
 
-def create_pipeline(**kwargs):
+def create_pipeline(**kwargs) -> Pipeline:
     return Pipeline(
         [
             node(
@@ -9,18 +9,6 @@ def create_pipeline(**kwargs):
                 inputs=["params:data_yaml_path", "params:img_size", "params:epochs", "params:batch_size"],
                 outputs="trained_model_path",
                 name="train_yolo_node",
-            ),
-            node(
-                func=evaluate_model,
-                inputs="trained_model_path",
-                outputs="model_metrics",
-                name="evaluate_model_node",
-            ),
-            node(
-                func=test_model,
-                inputs=["trained_model_path", "params:test_data_path"],
-                outputs="test_results",
-                name="test_model_node",
             ),
         ]
     )
